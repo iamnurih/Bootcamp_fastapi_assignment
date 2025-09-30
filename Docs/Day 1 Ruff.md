@@ -1,0 +1,29 @@
+
+## Ruff 란? 
+
+공식문서: https://docs.astral.sh/ruff/
+Source Code: https://github.com/astral-sh/ruff
+
+
+- 코드에서 버그나 스타일 문제를 찾아내어 고쳐줌 
+- Flake8, isort, Black등 대다수 포매팅 툴의 기능을 대체 
+- 대규모 프로젝트에서 사용
+- 캐시가 빌드인 되어 있으며 변경사항이 없으면 분석을 다시 하지 않음 
+- black 대체 가능. 자동완성 기능을 사용할 때 편함. 
+- (강의에서) format은 black으로, 그 외 import sort 와 lint(불필요한 코드 제거)는 Ruff 로 진행 예정이라고 하심 
+
+
+## 기초사용법 
+
+- 코드검사 
+```
+ruff check .
+```
+
+- 코드 자동 포매팅 
+```
+ruff format .
+```
+
+- 검사 규칙 커스터마이징 
+	pyproject.toml에서 필요한 규칙 지정 
