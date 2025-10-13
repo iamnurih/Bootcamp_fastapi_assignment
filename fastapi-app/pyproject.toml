@@ -1,0 +1,29 @@
+[project]
+name = "fastapi-app"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "iamnurih",email = "emailnuri@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.119.0,<0.120.0)",
+    "uvicorn[standard] (>=0.37.0,<0.38.0)"
+]
+
+[tool.poetry]
+packages = [{include = "fastapi_app", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=25.9.0,<26.0.0)",
+    "mypy (>=1.18.2,<2.0.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+    "ruff (>=0.14.0,<0.15.0)",
+    "coverage (>=7.10.7,<8.0.0)"
+]
