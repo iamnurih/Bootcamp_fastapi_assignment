@@ -9,7 +9,9 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi (>=0.119.0,<0.120.0)",
-    "uvicorn[standard] (>=0.37.0,<0.38.0)"
+    "uvicorn[standard] (>=0.37.0,<0.38.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "pydantic-settings (>=2.11.0,<3.0.0)"
 ]
 
 [tool.poetry]
@@ -27,3 +29,15 @@ dev = [
     "ruff (>=0.14.0,<0.15.0)",
     "coverage (>=7.10.7,<8.0.0)"
 ]
+
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.14"
+ignore_missing_imports = true
